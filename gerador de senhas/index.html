@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">                                                               <!-- a tag meta diz respeito aos metados do documento html-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senha</title>
+    <link rel="stylesheet" href="style.css">                                             <!-- na tag link, estamos linkando o documento css ao arquivo html-->
+</head>
+<body>
+    <img class="logo" src="./assets/logo.png" alt="Gerador de senha logo" />             <!-- logo do gerador -->
+    <main class="container-input">                                                       <!-- com a tag main, definimos o conteúdo dela como o principal da página -->
+        <span>tamanho : <span id="valor"></span> caracteres </span>                           <!-- a tag span serve para agrupar textos ou tags em um documento html -->
+        <input id="slider" class="slider" type="range" min="6" max="25" value="0" />     <!-- a tag input define um campo de entrada, onde nele o usuário irá inserir dados ou interagir com a página -->
+        <button id="button" class="button-cta" onclick="generatePassword()">Gerar Senha</button>                      <!-- aqui criamos o nosso botão que irá gerar a senha -->
+    </main>
+
+<div id="container-password" onclick="copyPassword()" class="container-password hide"/>                            <!-- a tag div irá criar uma seção no nosso documento html, sendo nesse caso, criado o espaço onde a senha será mostrada na página -->
+    <span class="title">Sua senha gerada foi:</span>
+    <span id="password" class="password"></span>                              <!-- nessa tag iremos colocar a senha que foi gerada -->
+    <span class="tooltip">clique na senha para copiar. 👍</span>                                         <!-- aqui o usuário irá clica e copiar a senha gerada -->
+
+</div>
+
+    <script src="script.js"></script>                                                    <!-- nesta tag linkamos nosso arquivo javascript ao arquivo html -->
+</body>
+</html>
+

@@ -1,0 +1,113 @@
+*{                                           /* aqui setamos alguns valores globais do documento html. */
+    font-family: sans-serif;                /* font-family diz respeito a fonte do texto. */ 
+    width: 100%;                            /* definimos a largura da página em 100% da tela. */
+    margin: 0 auto;                         /* aqui alinhamos tudo no centro. */
+    box-sizing: border-box;
+}
+
+body{                                       /* parâmetros do campo body do arquivo html. */
+    background-color: #355C7D;            /* definimos a cor do plano de fundo da página. */
+    width: 100%;                            /* largura da página. */
+    height: 100vhh;                         /* altura da página. */
+    display: flex;                          /* definindo a caixa de renderização do elemento*/
+    justify-content: center;                /* alinhando elementos ao centro.*/
+    align-items: center;
+    flex-direction: column;                 /* organizando os elementos da página um abaixo do outro*/
+}
+
+.logo{                                      /* definindo as propriedades da logo da página */
+    max-width: 600px;                       /* definindo a largura máxima da logo*/
+    margin-bottom: 24px;                    /* definindo uma margem abaixo da página. */
+    margin-top: 24px;
+}
+
+.container-input{                           /* parâmetros do container onde está inseridos todos os elementos da página*/
+    max-width: 480px;
+    margin: 14px 0;                         /* 14 pixels em cima e embaixo e 0 na esquerda.*/
+}
+
+.container-input span{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.slider{                                    /* slider onde iremos selecionar a quantidade de caracteres da senha. */
+    -webkit-appearance: none;               /* tirando a aparência de preenchido do slider. */
+    width: 100%;
+    border-radius: 5px;                     /* arredondando as bordas do slider. */
+    background: #C06C84;
+    height: 18px;
+    outline: none;                          /* outline é uma borda ao redor dos elementos da pesquina, sendo assim, estamos retirando ela. */
+    margin-top: 8px;                        /* margem superior. */
+}
+
+.button-cta{                                /* botão que irá gerar nossa senha. */
+    height: 40px;
+    background-color: #F67289;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;                        /* alterando o cursor quando estiver em cima do botão. */
+    margin-top: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container-password{                        /* área onde a senha é gerada.*/
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title{                                      /* titulo que fica acima da senha gerada. */
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.password{                                    /* a senha gerada propriamente dita.*/
+    height: 60px;
+    background-color: rgba(246, 114, 137, 0.70);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    transition: transform 0.5s;                /* definindo o tipo de transição do botão e o tempo que ela levará*/
+}
+
+.password:hover{                             /* comportamento da área da senha quando o cursor estiver sobre ele.*/
+    transform: scale(1.05);
+}
+
+.tooltip{                                     /* texto que dirá para clicar na senha para copiá-la;*/
+    color: #FFFFFF;
+    position: relative;
+    top : 20px;
+    padding: 6px 8px;                         /* 6 pixels em cima e embaixo e 8 pixels esquerda e direita*/
+    background:#355C7D;
+    border: 1px solid;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    visibility: hidden; 
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide{                                          /* classe que irá esconder o container que irá mostrar a senhra gerada*/
+    display: none;
+}
+
+.container-password:hover .tooltip{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+
+}
